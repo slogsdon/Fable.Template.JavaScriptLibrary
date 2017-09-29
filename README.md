@@ -1,7 +1,6 @@
 # Sample Fable JavaScript Library
 
-This template can be used to generate a simple web app with [Fable](http://fable.io/).
-You can find more templates by searching `Fable.Template` packages in [Nuget](https://www.nuget.org).
+Sample project describing the use of Fable and F# to develop a JavaScript library
 
 ## Requirements
 
