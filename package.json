@@ -1,0 +1,19 @@
+{
+  "name": "sample-fable-javascript-library",
+  "version": "0.1.0-dev",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "dotnet": "cd src && dotnet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "fable-utils": "^1.0.6",
+    "rollup": "^0.50.0",
+    "rollup-plugin-fable": "^1.1.1",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  }
+}
