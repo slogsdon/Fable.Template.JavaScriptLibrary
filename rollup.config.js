@@ -3,7 +3,7 @@ import fableUtils from 'fable-utils';
 import fable from 'rollup-plugin-fable';
 import nodeResolve from 'rollup-plugin-node-resolve';
 
-const resolve = (relativePath) => path.join(__dirname, relativePath);
+export const resolve = (relativePath) => path.join(__dirname, relativePath);
 
 const babelOptions = fableUtils.resolveBabelOptions({
   'presets': [
@@ -11,12 +11,15 @@ const babelOptions = fableUtils.resolveBabelOptions({
   ],
 });
 
+const name = 'sample-fable-javascript-library';
+
 export default {
-  name: 'SampleFableJavascriptLibrary',
-  input: resolve('./src/sample-fable-javascript-library.fsproj'),
+  name,
+  input: resolve(`./src/${name}.fsproj`),
   output: {
-    file: resolve('./dist/sample-fable-javascript-library.js'),
+    file: resolve(`./dist/${name}.js`),
     format: 'umd',
+    sourcemap: true,
   },
   plugins: [
     fable({ babel: babelOptions }),

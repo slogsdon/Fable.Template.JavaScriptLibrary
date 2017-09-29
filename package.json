@@ -7,12 +7,15 @@
     "build": "rollup -c rollup.config.js",
     "dev": "rollup -c rollup.config.js -w",
     "dotnet": "cd src && dotnet",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "rollup -c rollup.config.test.js && mocha dist/sample-fable-javascript-library-test.js",
+    "test:watch": "parallelshell \"rollup -c rollup.config.test.js -w\" \"mocha --watch dist/sample-fable-javascript-library-test.js\""
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "fable-utils": "^1.0.6",
+    "mocha": "^3.5.3",
+    "parallelshell": "^3.0.1",
     "rollup": "^0.50.0",
     "rollup-plugin-fable": "^1.1.1",
     "rollup-plugin-node-resolve": "^3.0.0"
