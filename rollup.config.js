@@ -28,4 +28,7 @@ export default {
       },
     }),
   ],
+  watch: {
+    include: [ 'src/**/*fs' ],
+  },
 }
