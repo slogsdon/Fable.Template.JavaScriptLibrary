@@ -1,4 +1,7 @@
-import config, {resolve} from './rollup.config';
+import path from 'path';
+import config from './rollup.config';
+
+const resolve = (relativePath) => path.join(__dirname, relativePath);
 
 config.name = config.name + '-test';
 config.input = resolve(`./test/${config.name}.fsproj`);

@@ -3,7 +3,7 @@ import fableUtils from 'fable-utils';
 import fable from 'rollup-plugin-fable';
 import nodeResolve from 'rollup-plugin-node-resolve';
 
-export const resolve = (relativePath) => path.join(__dirname, relativePath);
+const resolve = (relativePath) => path.join(__dirname, relativePath);
 
 const babelOptions = fableUtils.resolveBabelOptions({
   'presets': [
@@ -32,6 +32,6 @@ export default {
     }),
   ],
   watch: {
-    include: [ 'src/**/*fs' ],
+    include: [ 'src/**/*.fs' ],
   },
 }
