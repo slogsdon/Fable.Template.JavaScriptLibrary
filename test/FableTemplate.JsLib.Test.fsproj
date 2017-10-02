@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard1.6</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\sample-fable-javascript-library.fsproj" />
+    <ProjectReference Include="..\src\FableTemplate.JsLib.fsproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entry.fs" />

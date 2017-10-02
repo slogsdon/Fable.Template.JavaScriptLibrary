@@ -1,0 +1,48 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FableTemplate.JsLib", "src\FableTemplate.JsLib.fsproj", "{23BCBE1D-4ECA-477C-834C-19734FDD3108}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FableTemplate.JsLib.Test", "test\FableTemplate.JsLib.Test.fsproj", "{505A3BF0-21CC-46E9-95E4-DD494CFA7C33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23BCBE1D-4ECA-477C-834C-19734FDD3108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23BCBE1D-4ECA-477C-834C-19734FDD3108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23BCBE1D-4ECA-477C-834C-19734FDD3108}.Debug|x64.ActiveCfg = Debug|x64
+		{23BCBE1D-4ECA-477C-834C-19734FDD3108}.Debug|x64.Build.0 = Debug|x64
+		{23BCBE1D-4ECA-477C-834C-19734FDD3108}.Debug|x86.ActiveCfg = Debug|x86
+		{23BCBE1D-4ECA-477C-834C-19734FDD3108}.Debug|x86.Build.0 = Debug|x86
+		{23BCBE1D-4ECA-477C-834C-19734FDD3108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23BCBE1D-4ECA-477C-834C-19734FDD3108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23BCBE1D-4ECA-477C-834C-19734FDD3108}.Release|x64.ActiveCfg = Release|x64
+		{23BCBE1D-4ECA-477C-834C-19734FDD3108}.Release|x64.Build.0 = Release|x64
+		{23BCBE1D-4ECA-477C-834C-19734FDD3108}.Release|x86.ActiveCfg = Release|x86
+		{23BCBE1D-4ECA-477C-834C-19734FDD3108}.Release|x86.Build.0 = Release|x86
+		{505A3BF0-21CC-46E9-95E4-DD494CFA7C33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505A3BF0-21CC-46E9-95E4-DD494CFA7C33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505A3BF0-21CC-46E9-95E4-DD494CFA7C33}.Debug|x64.ActiveCfg = Debug|x64
+		{505A3BF0-21CC-46E9-95E4-DD494CFA7C33}.Debug|x64.Build.0 = Debug|x64
+		{505A3BF0-21CC-46E9-95E4-DD494CFA7C33}.Debug|x86.ActiveCfg = Debug|x86
+		{505A3BF0-21CC-46E9-95E4-DD494CFA7C33}.Debug|x86.Build.0 = Debug|x86
+		{505A3BF0-21CC-46E9-95E4-DD494CFA7C33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505A3BF0-21CC-46E9-95E4-DD494CFA7C33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{505A3BF0-21CC-46E9-95E4-DD494CFA7C33}.Release|x64.ActiveCfg = Release|x64
+		{505A3BF0-21CC-46E9-95E4-DD494CFA7C33}.Release|x64.Build.0 = Release|x64
+		{505A3BF0-21CC-46E9-95E4-DD494CFA7C33}.Release|x86.ActiveCfg = Release|x86
+		{505A3BF0-21CC-46E9-95E4-DD494CFA7C33}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal

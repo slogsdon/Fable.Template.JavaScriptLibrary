@@ -9,7 +9,7 @@ const babelOptions = fableUtils.resolveBabelOptions({
 });
 
 module.exports = {
-    entry: resolve(`./test/${name}-test.fsproj`),
+    entry: resolve(`./test/${name}.Test.fsproj`),
     outDir: resolve(`./bin/test`),
     babel: babelOptions
 }

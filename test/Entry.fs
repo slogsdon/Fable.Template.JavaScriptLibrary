@@ -1,16 +1,11 @@
 module SampleFableJavascriptLibraryTest.Entry
 
 open Fable.Core
-open Fable.Core.JsInterop
-open Fable.Import
+open Fable.Core.Testing
 
-open SampleFableJavascriptLibrary.Entry
+open FableTemplate.JsLib
 
 // BEGIN: mocha interop
-let inline equal (expected : 'T) (actual : 'T) : unit =
-    let assert' = importAll<obj> "assert"
-    assert'?deepStrictEqual(actual, expected) |> ignore
-
 [<Global>]
 let it (msg : string) (f : unit -> unit) : unit = jsNative
 
@@ -20,7 +15,9 @@ let describe (msg : string) (f : unit -> unit) : unit = jsNative
 
 describe "basic test" <| fun _ ->
     it "knows what's true" <| fun _ ->
-        true |> equal true
-
-    it "knows how to add" <| fun _ ->
-        add 1 2 |> equal 3
+        let actual =
+            [ ("A", 235.65); ("XXX", 12304294.) ]
+            |> Exports.printPairsPadded 4 10
+        let expected =
+            "A   ->    235.65\nXXX ->  12304294"
+        Assert.AreEqual(expected, actual)
