@@ -2,26 +2,24 @@
   "name": "sample-fable-javascript-library",
   "version": "0.1.0-dev",
   "license": "MIT",
-  "private": true,
+  "main": "dist/Entry.js",
   "scripts": {
-    "build": "rollup -c rollup.config.js",
-    "build:test": "rollup -c rollup.config.test.js",
+    "build": "fable-splitter -c splitter.config.js",
+    "build:test": "fable-splitter -c splitter.config.test.js",
     "build:test:watch": "run-s \"build:test -w\"",
     "dev": "run-s \"build -w\"",
     "dotnet": "cd src && dotnet",
     "test": "run-s build:test test:runner",
     "test:watch": "run-p build:test:watch test:runner:watch",
-    "test:runner": "mocha dist",
+    "test:runner": "mocha bin/test",
     "test:runner:watch": "run-s \"test:runner -w\""
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "fable-splitter": "^0.1.20",
     "fable-utils": "^1.0.6",
     "mocha": "^3.5.3",
-    "npm-run-all": "^4.1.1",
-    "rollup": "^0.50.0",
-    "rollup-plugin-fable": "^1.1.1",
-    "rollup-plugin-node-resolve": "^3.0.0"
+    "npm-run-all": "^4.1.1"
   }
 }
