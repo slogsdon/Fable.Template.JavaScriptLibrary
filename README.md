@@ -23,7 +23,7 @@ The project can be used by editors compatible with the new .fsproj format, like 
 1. Install JS dependencies: `yarn install`
 2. **Move to `src` folder**: `cd src`
 3. Install F# dependencies: `dotnet restore`
-4. Start Fable daemon, and run [Rollup](https://rollupjs.org/): `dotnet fable yarn-build`
+4. Start Fable daemon, and run [`fable-splitter`](https://www.npmjs.com/package/fable-splitter): `dotnet fable yarn-build`
 
 > `dotnet fable yarn-build` (or `npm-build`) is used to start the Fable daemon and run a script in `package.json` concurrently. It's a shortcut of `yarn-run [SCRIPT_NAME]`, e.g. `dotnet fable yarn-run build`.
 
@@ -52,11 +52,11 @@ As a convenience, `cd src && dotnet` is exposed as a script within `package.json
 
 > JS dependencies will be installed in `node_modules`. See [`yarn`](https://yarnpkg.com) and/or [`npm`](http://npmjs.com/) websites for more info.
 
-### Rollup
+### `fable-splitter`
 
-[Rollup](https://rollupjs.org) is a bundler, which links different JS sources into a single file making deployment much easier. Fable interacts with Rollup through the `rollup-plugin-fable` package.
+[`fable-splitter`](https://www.npmjs.com/package/fable-splitter) is a JS client for Fable that compiles F# files to individual JS files.
 
-- **`rollup.config.js`**: is the configuration file for Rollup. It allows you to set many things: like the path of the bundle or [Babel](https://babeljs.io/) options. See [Rollup website](https://rollupjs.org) for more info.
+- **`splitter.config.js`**: is the configuration file for `fable-splitter`. It allows you to set a few configurable things, like the path of the bundle or [Babel](https://babeljs.io/) options.
 
 ### F# source files
 
