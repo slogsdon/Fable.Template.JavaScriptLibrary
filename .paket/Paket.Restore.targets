@@ -1,6 +1,10 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <!-- Prevent dotnet template engine to parse this file -->
-    <PropertyGroup>
+  <!--/-:cnd:noEmit-->
+  <PropertyGroup>
+    <!-- make MSBuild track this file for incremental builds. -->
+    <!-- ref https://blogs.msdn.microsoft.com/msbuild/2005/09/26/how-to-ensure-changes-to-a-custom-target-file-prompt-a-rebuild/ -->
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <!-- Mark that this target file has been loaded.  -->
     <IsPaketRestoreTargetsFileLoaded>true</IsPaketRestoreTargetsFileLoaded>
     <PaketToolsPath>$(MSBuildThisFileDirectory)</PaketToolsPath>
@@ -31,6 +35,7 @@
     <!-- Step 1 Check if lockfile is properly restored -->
     <PropertyGroup>
       <PaketRestoreRequired>true</PaketRestoreRequired>
+      <NoWarn>$(NoWarn);NU1603</NoWarn>
     </PropertyGroup>
 
     <PropertyGroup Condition="Exists('$(PaketRestoreCacheFile)') ">
@@ -234,4 +239,5 @@
               NuspecBasePath="$(NuspecBasePath)"
               NuspecProperties="$(NuspecProperties)"/>
   </Target>
-  </Project>
+  <!--/+:cnd:noEmit-->
+</Project>

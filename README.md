@@ -21,9 +21,8 @@ The project can be used by editors compatible with the new .fsproj format, like 
 > In the commands below, `yarn` is the tool of choice. If you want to use npm, just replace `yarn` by `npm` in the commands.
 
 1. Install JS dependencies: `yarn install`
-2. **Move to `src` folder**: `cd src`
-3. Install F# dependencies: `dotnet restore`
-4. Start Fable daemon, and run [`fable-splitter`](https://www.npmjs.com/package/fable-splitter): `dotnet fable yarn-build`
+2. Install F# dependencies: `dotnet restore`
+3. Start Fable daemon, and run [`fable-splitter`](https://www.npmjs.com/package/fable-splitter): `cd src && dotnet fable yarn-build`
 
 > `dotnet fable yarn-build` (or `npm-build`) is used to start the Fable daemon and run a script in `package.json` concurrently. It's a shortcut of `yarn-run [SCRIPT_NAME]`, e.g. `dotnet fable yarn-run build`.
 
@@ -61,6 +60,10 @@ As a convenience, `cd src && dotnet` is exposed as a script within `package.json
 ### F# source files
 
 The template only contains two F# source files: the project (`.fsproj`) and a source file (`.fs`) in `src` folder.
+
+### Test project
+
+In `./test`, a small Fable app is present to test the project using [Mocha](https://mochajs.org), a JavaScript testing framework capable of testing against Node.js and browsers. Mocha only needs to know where the built test files are in order to ru,n but if you're interested in changing some of the default behavior (e.g. changing the reporter to `dot` or the test interface to `tdd`), be sure to visit [Mocha's documentation](https://mochajs.org/#table-of-contents) for more information.
 
 ## License
 
