@@ -1,4 +1,4 @@
-module SampleFableJavascriptLibraryTest.Entry
+module FableTemplate.JsLib.Test
 
 open Fable.Core
 open Fable.Core.Testing
