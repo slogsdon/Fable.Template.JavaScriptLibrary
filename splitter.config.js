@@ -1,6 +1,6 @@
 const path = require('path');
 
-const name = 'sample-fable-javascript-library';
+const name = 'FableTemplate.JsLib';
 const resolve = (relativePath) => path.join(__dirname, relativePath);
 
 module.exports = {
