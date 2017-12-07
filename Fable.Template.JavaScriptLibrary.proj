@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>JavaScript library built with Fable + FSharp</Description>
+    <Authors>Shane Logsdon</Authors>
+    <PackageProjectUrl>https://github.com/slogsdon/Fable.Template.JavaScriptLibrary</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/slogsdon/Fable.Template.JavaScriptLibrary/blob/master/LICENSE.md</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/slogsdon/Fable.Template.JavaScriptLibrary.git</RepositoryUrl>
+    <PackageTags>fable;template;fsharp</PackageTags>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageType>Template</PackageType>
+    <Version>0.1.0</Version>
+    <PackProjectInputFile>$(MSBuildProjectFullPath)</PackProjectInputFile>
+    <NoBuild>true</NoBuild>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ExcludeFromPackage>
+        Content/node_modules/**/*;
+        Content/packages/**/*;
+        Content/bin/**/*;
+	Content/dist/**/*;
+        Content/src/bin/**/*;
+        Content/src/obj/**/*;
+        Content/test/bin/**/*;
+        Content/test/obj/**/*;
+    </ExcludeFromPackage>
+</PropertyGroup>
+  <ItemGroup>
+    <Content Include="Content/**/*" Exclude="$(ExcludeFromPackage)" >
+        <PackagePath>Content\</PackagePath>
+    </Content>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Shane Logsdon",
+  "classifications": [
+    "Fable",
+    "JavaScript"
+  ],
+  "tags": {
+    "language": "F#",
+    "type": "project"
+  },
+  "identity": "Fable.Template.JavaScriptLibrary",
+  "name": "Fable JavaScript Library",
+  "shortName": "fable-js-lib",
+  "sourceName": "FableTemplate.JsLib",
+  "preferNameDirectory": true
+}
