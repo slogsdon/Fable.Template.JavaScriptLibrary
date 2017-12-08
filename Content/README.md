@@ -30,6 +30,28 @@ When you want to output the JS code to disk, run `dotnet fable yarn-build` in `.
 
 As a convenience, `cd src && dotnet` is exposed as a script within `package.json`, allowing the use of `dotnet` tools from the project root, e.g. `yarn dotnet fable yarn-build`.
 
+## Publishing the library
+
+Since this is meant to be consumed by other JavaScript libraries, the project is setup to be published to the npm package registry. Once you have an account with npm, publishing is as simple as
+
+```
+npm publish
+```
+
+Read more on [publishing npm packages](https://docs.npmjs.com/getting-started/publishing-npm-packages).
+
+## Consuming the library
+
+Once your library is published to a package registry, your users will be able to consume it in their code:
+
+```javascript
+const {printPairsPadded} = require('sample-fable-javascript-library');
+
+console.log(printPairsPadded(' ', ' ', [
+  ['foo', 'bar'],
+]));
+```
+
 ## Project structure
 
 ### Paket
